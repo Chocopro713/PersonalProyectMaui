@@ -1,9 +1,10 @@
-﻿using ChrisPersonalProject.Services;
+﻿using ChrisPersonalProject.Models;
+using ChrisPersonalProject.Services;
 using ChrisPersonalProject.Views.Auth;
 
 namespace ChrisPersonalProject.ViewModels.Auth;
 
-public class LogInViewModel : BindableBase
+public class LogInViewModel : BaseViewModel
 {
     #region Attributes
     private string _userName;

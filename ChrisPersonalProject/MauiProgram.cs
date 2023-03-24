@@ -1,23 +1,27 @@
-﻿using ChrisPersonalProject.Services;
-using ChrisPersonalProject.ViewModels.Auth;
-using ChrisPersonalProject.Views.Auth;
+﻿using Acr.UserDialogs;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.LifecycleEvents;
 
 namespace ChrisPersonalProject;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
+    /// <summary>
+    /// Main configuration of the application using Prism
+    /// </summary>
+    /// <returns></returns>
+    public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
 			.UsePrism(PrismStartup.Configure)
-			.ConfigureFonts(fonts =>
+            .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+			})
+            .Services.AddSingleton<IUserDialogs>(UserDialogs.Instance);
 
 #if DEBUG
 		builder.Logging.AddDebug();

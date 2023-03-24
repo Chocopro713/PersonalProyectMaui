@@ -1,6 +1,8 @@
-﻿using Android.App;
+﻿using Acr.UserDialogs;
+using Android.App;
 using Android.Runtime;
 
+[assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
 namespace ChrisPersonalProject;
 
 [Application]
@@ -11,5 +13,9 @@ public class MainApplication : MauiApplication
 	{
 	}
 
-	protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+	protected override MauiApp CreateMauiApp()
+	{
+        UserDialogs.Init(this);
+        return MauiProgram.CreateMauiApp();
+	}
 }

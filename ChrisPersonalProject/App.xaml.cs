@@ -1,11 +1,14 @@
-﻿using ChrisPersonalProject.Views.Auth;
+﻿using Acr.UserDialogs;
+using ChrisPersonalProject.Views.Auth;
 
 namespace ChrisPersonalProject;
 
 public partial class App : Application
 {
-	public App()
+    public static IUserDialogs UserDialog;
+    public App(IUserDialogs userDialogs)
 	{
 		InitializeComponent();
-	}
+        UserDialog = userDialogs;
+    }
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChrisPersonalProject</name>
+    </assembly>
+    <members>
+        <member name="T:ChrisPersonalProject.GlobalSetting">
+            <summary>
+            Clase a nivel global lo cual permite almacenar información de forma temporal.
+            Tag: "Sessión Temporal", hasta que se cierre la aplicación.
+            Esta información se vuelve almacenar cuando habre la sessión 
+            Almacena de forma temporal la información.
+            La infomación se obtiene por medio del "singleton"
+            </summary>
+        </member>
+        <member name="F:ChrisPersonalProject.GlobalSetting.instance">
+            <value>Instancia de la clase.</value>
+        </member>
+        <member name="M:ChrisPersonalProject.GlobalSetting.GetInstance">
+            <summary>Singleton</summary>
+            <remarks>Restringir la creación de objetos pertenecientes a una clase o el 
+            valor de un tipo a un único objeto. Su intención consiste en garantizar que 
+            una clase solo tenga una instancia y proporcionar un punto de acceso global a ella</remarks>
+            <returns>Singleton <see cref="T:ChrisPersonalProject.GlobalSetting" /> </returns>
+        </member>
+        <member name="M:ChrisPersonalProject.MauiProgram.CreateMauiApp">
+            <summary>
+            Main configuration of the application using Prism
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ChrisPersonalProject.Services.RestApi.ApiManager.ListUsers">
+            SECURITY
+        </member>
+        <member name="M:ChrisPersonalProject.ViewModels.Home.HomeViewModel.GetData">
+            <summary>
+            Call the test API and get the data
+            </summary>
+        </member>
+        <member name="T:Refit.Implementation.Generated">
+            <inheritdoc />
+        </member>
+        <member name="T:Refit.Implementation.Generated.ChrisPersonalProjectServicesRestApiIEndPoints">
+            <inheritdoc />
+        </member>
+        <member name="P:Refit.Implementation.Generated.ChrisPersonalProjectServicesRestApiIEndPoints.Client">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.ChrisPersonalProjectServicesRestApiIEndPoints.#ctor(System.Net.Http.HttpClient,Refit.IRequestBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.ChrisPersonalProjectServicesRestApiIEndPoints.ListUsers">
+            <inheritdoc />
+        </member>
+        <member name="M:Refit.Implementation.Generated.ChrisPersonalProjectServicesRestApiIEndPoints.ChrisPersonalProject#Services#RestApi#IEndPoints#ListUsers">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

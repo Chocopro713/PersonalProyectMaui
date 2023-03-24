@@ -14,5 +14,8 @@
     <MauiXaml Update="Views\Auth\SignUpPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\Home\HomePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
   </ItemGroup>
 </Project>

@@ -1,13 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ChrisPersonalProject.ViewModels.Auth;
 
-namespace ChrisPersonalProject.ViewModels.Auth
+public class SignUpViewModel : BindableBase
 {
-    public class SignUpViewModel : BindableBase
+    #region Attributes
+    #endregion Attributes
+
+    #region Properties
+    #endregion Properties
+
+    #region Constructor
+    public SignUpViewModel()
     {
 
     }
+    #endregion Constructor
+
+    #region Commands
+    #endregion Commands
 }
