@@ -8,6 +8,9 @@
     <DefaultDevice>chocophone</DefaultDevice>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="CustomControls\OutlinedEntryControl.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\Auth\LogInPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

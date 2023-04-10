@@ -24,8 +24,7 @@ public class LogInViewModel : BaseViewModel
     {
         _navigation = navigation;
 
-        this.Title = "Test Title";
-        this.UserName = service.ShowMessage();
+        // this.UserName = service.ShowMessage();
         this.ValidateDataCommand = new Command(OnValidateDataCommand);
     }
     #endregion Constructor

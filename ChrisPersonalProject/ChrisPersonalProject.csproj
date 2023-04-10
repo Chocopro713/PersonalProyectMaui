@@ -51,6 +51,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\MaterialIcons-Regular.ttf" />
+	  <None Remove="Resources\Images\icon_google.svg" />
+	  <None Remove="Resources\Images\login.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Acr.UserDialogs" Version="8.1.0-alpha-0009" />
 		<PackageReference Include="fusillade" Version="2.4.67" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
@@ -62,6 +68,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="CustomControls\OutlinedEntryControl.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Auth\LogInPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
