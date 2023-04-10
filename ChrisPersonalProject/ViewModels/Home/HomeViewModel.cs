@@ -15,7 +15,7 @@ public class HomeViewModel : BaseViewModel
     public HomeViewModel()
     {
         this.RefreshCommand = new Command(GetData);
-        GetData();
+        // GetData();
     }
     #endregion Constructor
 
