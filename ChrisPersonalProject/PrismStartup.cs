@@ -26,6 +26,7 @@ internal static class PrismStartup
             // Auth
             .RegisterForNavigation<LogInPage, LogInViewModel>()
             .RegisterForNavigation<SignUpPage, SignUpViewModel>()
+            .RegisterForNavigation<ForgotPasswordPage, ForgotPasswordViewModel>()
 
             // Home
             .RegisterForNavigation<HomePage, HomeViewModel>()
