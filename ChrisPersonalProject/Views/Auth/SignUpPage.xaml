@@ -25,6 +25,30 @@
                     Text="{Binding UserName}"/>
             </Grid>
 
+            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10" Margin="0,0,0,12">
+                <Label
+                    Text="{x:Static local:IconFont.Account_circle}" 
+                    FontFamily="MaterialIcons"
+                    VerticalOptions="Center"
+                    FontSize="25"  />
+                <Entry 
+                    Grid.Column="1"
+                    Placeholder="Full name"
+                    Text="{Binding UserName}"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10" Margin="0,0,0,12">
+                <Label
+                    Text="{x:Static local:IconFont.Phone}" 
+                    FontFamily="MaterialIcons"
+                    VerticalOptions="Center"
+                    FontSize="25"  />
+                <Entry 
+                    Grid.Column="1"
+                    Placeholder="Mobile"
+                    Text="{Binding UserName}"/>
+            </Grid>
+
             <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10">
                 <Label
                     Text="{x:Static local:IconFont.Lock_outline}" 
@@ -57,13 +81,19 @@
                 </Grid>
             </Grid>
 
-            <Label 
-                Text="Forgot Password?" 
-                TextColor="{StaticResource Primary}"
+            <Label
                 HorizontalOptions="End"
                 Margin="0,20">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="By signing up, you're agree to our "/>
+                        <Span Text="Terms and Conditions " TextColor="{StaticResource Primary}" FontAttributes="Bold"/>
+                        <Span Text="and "/>
+                        <Span Text="Privacy Policy" TextColor="{StaticResource Primary}" FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}"/>
+                    <TapGestureRecognizer Command="{Binding TermsAndConditionsCommand}"/>
                 </Label.GestureRecognizers>
             </Label>
 

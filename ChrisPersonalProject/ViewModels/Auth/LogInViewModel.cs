@@ -2,6 +2,7 @@
 using ChrisPersonalProject.Services;
 using ChrisPersonalProject.Views.Auth;
 using ChrisPersonalProject.Views.Home;
+using Prism.Navigation;
 
 namespace ChrisPersonalProject.ViewModels.Auth;
 
@@ -69,7 +70,12 @@ public class LogInViewModel : BaseViewModel
     /// </summary>
     private async void OnForgotPasswordCommand()
     {
-        var result = await _navigation.NavigateAsync($"/{nameof(ForgotPasswordPage)}");
+        // $"/NavigationPage/{nameof(ForgotPasswordPage)}"
+        var result = await _navigation.CreateBuilder()
+            .UseRelativeNavigation()
+            .AddSegment($"{nameof(ForgotPasswordPage)}")
+            .NavigateAsync();
+
         if (!result.Success)
             Console.WriteLine(result);
     }
@@ -79,7 +85,7 @@ public class LogInViewModel : BaseViewModel
     /// </summary>
     private async void OnRegisterCommand()
     {
-        var result = await _navigation.NavigateAsync($"{nameof(LogInPage)}/{nameof(SignUpPage)}");
+        var result = await _navigation.NavigateAsync($"/NavigationPage/{nameof(SignUpPage)}");
         if (!result.Success)
             Console.WriteLine(result);
     }
