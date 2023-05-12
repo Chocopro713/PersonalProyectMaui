@@ -1,14 +1,27 @@
 ﻿<?xml version = "1.0" encoding = "UTF-8" ?>
-<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ChrisPersonalProject"
-             x:Class="ChrisPersonalProject.App">
+<Application 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ChrisPersonalProject"
+    xmlns:prism="http://prismlibrary.com"
+    x:Class="ChrisPersonalProject.App">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="Button" x:Key="BackButtonWithoutBar">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="Text" Value="{x:Static local:IconFont.Arrow_back}"/>
+                <Setter Property="FontFamily" Value="MaterialIcons"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="TextColor" Value="{StaticResource Primary}"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

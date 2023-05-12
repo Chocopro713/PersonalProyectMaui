@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ChrisPersonalProject"
     x:Class="ChrisPersonalProject.Views.Auth.LogInPage"
+    NavigationPage.HasNavigationBar="False"
     xmlns:cc="clr-namespace:ChrisPersonalProject.CustomControls">
     <ScrollView>
         <VerticalStackLayout Margin="20">

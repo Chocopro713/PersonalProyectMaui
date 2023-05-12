@@ -70,12 +70,7 @@ public class LogInViewModel : BaseViewModel
     /// </summary>
     private async void OnForgotPasswordCommand()
     {
-        // $"/NavigationPage/{nameof(ForgotPasswordPage)}"
-        var result = await _navigation.CreateBuilder()
-            .UseRelativeNavigation()
-            .AddSegment($"{nameof(ForgotPasswordPage)}")
-            .NavigateAsync();
-
+        var result = await _navigation.NavigateAsync($"{nameof(ForgotPasswordPage)}");
         if (!result.Success)
             Console.WriteLine(result);
     }
@@ -85,7 +80,7 @@ public class LogInViewModel : BaseViewModel
     /// </summary>
     private async void OnRegisterCommand()
     {
-        var result = await _navigation.NavigateAsync($"/NavigationPage/{nameof(SignUpPage)}");
+        var result = await _navigation.NavigateAsync($"{nameof(SignUpPage)}");
         if (!result.Success)
             Console.WriteLine(result);
     }

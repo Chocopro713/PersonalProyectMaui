@@ -12,7 +12,7 @@ internal static class PrismStartup
 {
     public static void Configure(PrismAppBuilder builder)
     {
-        builder.RegisterTypes(RegisterTypes).OnAppStart("/NavigationPage//LogInPage");
+        builder.RegisterTypes(RegisterTypes).OnAppStart("/NavigationPage/LogInPage");
     }
 
     public static void RegisterTypes(IContainerRegistry containerRegistry)
