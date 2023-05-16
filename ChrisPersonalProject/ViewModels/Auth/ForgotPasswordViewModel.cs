@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChrisPersonalProject.ViewModels.Auth
+namespace ChrisPersonalProject.ViewModels.Auth;
+
+public class ForgotPasswordViewModel
 {
-    public class ForgotPasswordViewModel
-    {
-    }
 }

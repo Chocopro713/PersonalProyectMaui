@@ -1,4 +1,6 @@
-﻿namespace ChrisPersonalProject.ViewModels.Auth;
+﻿using ChrisPersonalProject.Views.Auth;
+
+namespace ChrisPersonalProject.ViewModels.Auth;
 
 public class SignUpViewModel : BindableBase
 {
@@ -8,15 +10,20 @@ public class SignUpViewModel : BindableBase
 
     #region Properties
     public bool ShowPassword { get => _showPassword; set { SetProperty(ref _showPassword, value); } }
+    public INavigationService _navigation { get; set; }
     public Command TermsAndConditionsCommand { get; set; }
     public Command ShowPassCommand { get; set; }
+    public Command SingUpCommand { get; set; }
     #endregion Properties
 
     #region Constructor
-    public SignUpViewModel()
+    public SignUpViewModel(INavigationService navigation)
     {
+        _navigation = navigation;
+
         this.TermsAndConditionsCommand = new Command(OnTermsAndConditionsCommand);
         this.ShowPassCommand = new Command(OnShowPassCommand);
+        this.SingUpCommand = new Command(OnSingUpCommand);
     }
 
     #endregion Constructor
@@ -36,6 +43,13 @@ public class SignUpViewModel : BindableBase
     private void OnShowPassCommand()
     {
         this.ShowPassword = !this.ShowPassword;
+    }
+
+    private async void OnSingUpCommand()
+    {
+        var result = await _navigation.NavigateAsync($"{nameof(EnterOTPPage)}");
+        if (!result.Success)
+            Console.WriteLine(result);
     }
     #endregion Commands
 }

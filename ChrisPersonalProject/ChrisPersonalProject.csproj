@@ -55,6 +55,8 @@
 	  <None Remove="Resources\Images\forgot_pass.svg" />
 	  <None Remove="Resources\Images\icon_google.svg" />
 	  <None Remove="Resources\Images\login.svg" />
+	  <None Remove="Resources\Images\otp.svg" />
+	  <None Remove="Resources\Images\reset_pass.svg" />
 	  <None Remove="Resources\Images\signup.svg" />
 	</ItemGroup>
 
@@ -73,10 +75,16 @@
 	  <MauiXaml Update="CustomControls\OutlinedEntryControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Auth\EnterOTPPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Auth\ForgotPasswordPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Auth\LogInPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Auth\ResetPasswordPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Auth\SignUpPage.xaml">
